@@ -3,8 +3,10 @@
 *******************************************/
 
 var express = require('express');
+var cors = require('cors');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
 
 /*******************************************
 * APP SETTINGS
@@ -18,15 +20,21 @@ app.set('port', (process.env.PORT || 5000));
 * USAGES
 *******************************************/
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser())
+app.use(cookieParser());
+app.use(expressValidator());
 
 /*******************************************
 * ROUTES
 *******************************************/
 
 app.use('/', require('./routes'));
+
+app.use(function(err, req, res, next) {
+  res.status(500).json({ 'error': err });
+});
 
 /*******************************************
 * START
