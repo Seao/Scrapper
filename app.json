@@ -1,0 +1,8 @@
+{
+  "name": "Scrapper",
+  "description": "Web scrapping rest API",
+  "repository": "https://github.com/Seao/scrapper",
+  "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+  "keywords": ["node", "web", "scrapping"],
+  "image": "heroku/nodejs"
+}
