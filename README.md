@@ -10,6 +10,12 @@ I used YQL (Yahoo Query Language) a long time ago for reading information out of
 
 ## Installation
 
+### Heroku
+
+Simplest way is to deploy the application on heroku :
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Seao/scrapper)
+
 ### Local
 
 ```bash
